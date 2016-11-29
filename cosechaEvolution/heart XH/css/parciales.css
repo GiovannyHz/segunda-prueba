@@ -1,0 +1,1776 @@
+@charset "UTF-8";
+.margin-auto {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*Colores base*/
+/*Fuentes y tamaños*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-moz-selection {
+  background: #fff;
+  color: #FF530D;
+}
+
+::selection {
+  background: #fff;
+  color: #FF530D;
+}
+
+::-moz-selection {
+  background: #fff;
+  color: #FF530D;
+}
+
+html {
+  font-size: 62.5%;
+  /*10px*/
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #efefef;
+  color: #334455;
+  font: lighter 1rem "Roboto", Segoe UI, Sans-Serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 3.2em;
+  /*32px*/
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 2.4em;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font: 300 1.6em "Roboto", Segoe UI, Sans-Serif;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+main {
+  display: block;
+  padding: 20px;
+}
+
+/*---------------------------------------------------------------------------------------------------------
+  Barra Lateral
+-----------------------------------------------------------------------------------------------------------*/
+/*-- Barra Lateral --*/
+.barra-lateral figure, .bl-congreso {
+  display: inline-block;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+}
+
+/*-- Imagenes de Barra Lateral --*/
+.barra-lateral figure img {
+  border-radius: 5px;
+  max-width: 220px;
+  transition: .4s;
+  width: 100%;
+}
+
+.barra-lateral figure img:hover {
+  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.3), inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+  opacity: .8;
+  /*transform:translateY(5px);*/
+}
+
+.barra-lateral figure img:active {
+  -webkit-transform: scale(0.9, 0.9);
+      -ms-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
+}
+
+/*temporal iframe*/
+.bl-congreso {
+  border-radius: 5px;
+  max-width: 220px;
+  transition: .4s;
+  width: 100%;
+}
+
+/*---------------------------------------------------------------------------------------------------------
+  Contenido
+-----------------------------------------------------------------------------------------------------------*
+/*contenido*/
+.contenido {
+  border-bottom: 1px solid #c3c3c3;
+}
+
+/*titulo*/
+.contenido h2 {
+  margin-left: 2%;
+  padding-top: 30px;
+}
+
+/*reproductor de streaming*/
+.contenido .streaming {
+  /*demas*/
+  background: #000;
+  color: #fefefe;
+  min-height: 240px;
+  height: 361px;
+  max-height: 80%;
+  /*top, right, bottom, left*/
+  margin: 1em 0px 1em 1.875em;
+  width: 720px;
+  max-width: 80%;
+}
+
+/*Reproductor de Video*/
+.contenido .streaming iframe {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+}
+
+.contenido .streaming p {
+  /*demas*/
+  font-size: 3.2em;
+  padding: 150px 0px;
+  text-align: center;
+}
+
+/*-- botones --*/
+.video_btn, .live_btn {
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  font: 400 italic 1.8em Roboto;
+  outline: none;
+  padding: 10px;
+  transition: .7s;
+  width: 30%;
+  margin: 0em 1em 1em 1em;
+}
+
+.video_btn {
+  /*boton de Enzeñanza de la Semana*/
+  border: 1px solid #f45e21;
+  color: #f45e21;
+}
+
+.live_btn {
+  /*boton de Streaming(Radio)*/
+  border: 1px solid #fa2e2e;
+  color: #fa2e2e;
+}
+
+/*Efectos*/
+.live_btn:hover {
+  background: #fa2e2e;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fefefe;
+}
+
+.video_btn:hover {
+  background: #FF530D;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fefefe;
+}
+
+/*Style al Activar boton*/
+.activoLive {
+  background: #fa2e2e;
+  border: 1px solid #fa2e2e;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fefefe;
+  font: 300 1.8em Roboto;
+  outline: none;
+  padding: 10px;
+  width: 30%;
+  margin: 0em 1em 1em 1em;
+}
+
+.activoVideo {
+  background: #FF530D;
+  border: 1px solid #FF530D;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, 0.2);
+  color: #fefefe;
+  font: 300 1.8em Roboto;
+  outline: none;
+  padding: 10px;
+  width: 30%;
+}
+
+/*Reproducotres*/
+.Play {
+  /*Contenedor de Enseñanza de la Semana*/
+  margin-bottom: 0;
+  display: block;
+  /*by default*/
+  padding-bottom: 1.6em;
+}
+
+.streamingLive {
+  /*Contenedor del Straming Radio en vivo*/
+  display: none;
+  /*by default*/
+  padding-bottom: 1.6em;
+}
+
+/*---------------------------------------------------------------------------------------------------------
+  Eventos
+-----------------------------------------------------------------------------------------------------------*
+/*SlideShow Eventos*/
+.eventos h2 {
+  color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/*Categorias de los eventos*/
+.eventos .box-eventos {
+  /*Contenedor de las categorias*/
+  display: block;
+  margin: 0px auto;
+  max-width: 1280px;
+  padding: 20px 0px;
+  text-align: center;
+  width: 100%;
+}
+
+.eventos .box-eventos .categoria {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.eventos .box-eventos .categoria img {
+  border-radius: 5px;
+  max-width: 220px;
+  /*tamaño Original del Poster*/
+  transition: .4s;
+  width: 100%;
+}
+
+.eventos .box-eventos .categoria img:hover {
+  box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.3), inset 0px 0px 15px rgba(0, 0, 0, 0.5);
+  /*opacity: .8; lo quitamos por el color naranja*/
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.eventos .box-eventos .categoria img:active {
+  -webkit-transform: scale(0.9, 0.9);
+      -ms-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
+}
+
+/*--------------------------------------------------------------------------------------------------------
+  Pie de pagina
+---------------------------------------------------------------------------------------------------------*/
+.foot h3 {
+  color: #ECF0F1;
+  font-weight: 300;
+  text-align: center;
+}
+
+.foot ul li a {
+  color: #ECF0F1;
+  display: block;
+  font: 300 1.6em 'Roboto', Segoe UI, Sans-Serif;
+  padding: 5px;
+  text-align: justify;
+  transition: .4s;
+}
+
+.foot ul li a:hover {
+  -webkit-transform: translateX(5px);
+      -ms-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+/*--- Clases del Contenedor .foot ---*/
+.foot .Ministerio {
+  padding: 20px 33%;
+}
+
+.foot .Etiquetas {
+  padding-top: 20px;
+  padding-left: 33%;
+}
+
+.foot .Habla-con-Nosotros {
+  padding: 20px 15%;
+  width: 100%;
+}
+
+/*flechas de foot*/
+.foot .ion-chevron-down {
+  font-size: 1.6em;
+  display: none;
+}
+
+/*-----------------------------------------------------------------------------------------------------------
+  Derechos de Autor
+------------------------------------------------------------------------------------------------------------*/
+/*--- .Autores ---*/
+.autores {
+  background: #00000a;
+  float: left;
+  /*margin-top:20px;*/
+  max-width: 1280px;
+  /*overflow:hidden;*/
+  /*padding:5px;*/
+  width: 100%;
+}
+
+.acerca-de {
+  padding: 15px 30px;
+  position: relative;
+  float: left;
+  margin-left: 60px;
+  /*temporal*/
+}
+
+.acerca-de li a {
+  color: #777;
+  /*blanco*/
+  font-size: 2em;
+  float: left;
+  margin-left: 10px;
+  transition: .4s;
+}
+
+.acerca-de li a:hover {
+  color: #fff;
+}
+
+/*Estrellas*/
+.ion-ios-star, .ion-ios-star-outline {
+  /*Ahora son una*/
+  position: absolute;
+  left: 15px;
+}
+
+.acerca-de li a .ion-ios-star {
+  /*estrella con relleno*/
+  opacity: 0;
+  transition: .6s;
+}
+
+.acerca-de li a .ion-ios-star-outline {
+  /*estrella de linea*/
+  display: inline;
+  transition: .6s;
+}
+
+.acerca-de li a:hover .ion-ios-star-outline {
+  /*lo vamos a ocultar con la opacidad*/
+  opacity: 0;
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.acerca-de li a:hover .ion-ios-star {
+  /*Ahora mostramos la estrella con relleno*/
+  opacity: 1;
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+  /*A tráves de la Opacidad*/
+}
+
+/*--- Redes Sociales ---*/
+/*.redes-sociales(ul)*/
+.redes-sociales {
+  float: right;
+  margin-right: 40px;
+  /*overflow:hidden;*/
+  padding: 5px;
+}
+
+.redes-sociales li {
+  float: left;
+  margin-left: 5px;
+}
+
+.redes-sociales li a {
+  border-radius: 50%;
+  color: #777;
+  display: block;
+  font-size: 2em;
+  padding: 10px 15px;
+  transition: ease .6s;
+  z-index: 1000;
+}
+
+/*Efecto de las Redes sociales*/
+.redes-sociales li a:hover {
+  background: #FF530D;
+  color: #fff;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3), 0px 0px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+/*--- © Copy Right ---*/
+.derechos-de-autor {
+  background: #fff;
+  float: left;
+  width: 100%;
+}
+
+.derechos-de-autor h4 {
+  color: #777;
+  font: 400 1.6em "Roboto", Segoe UI, Sans-Serif;
+  padding: 15px;
+  text-align: center;
+}
+
+/*-----------------------------------------------------------------------------------------------------------
+  Contenido Principal
+------------------------------------------------------------------------------------------------------------*/
+.one-page {
+  margin: 0 auto;
+  max-width: 1000px;
+  /*padding:20px;*/
+  width: 100%;
+}
+
+/*titulo de one-page*/
+.one-page h2 {
+  padding-top: 20px;
+}
+
+/*icono del titulo del contenido*/
+.one-page h2 .ion-arrow-right-b {
+  color: #FF530D;
+  margin-right: 10px;
+}
+
+/*Listas de los Ministerios*/
+.lista-ministerios {
+  margin-left: 50px;
+  font-size: 1.6em;
+}
+
+/*Iconos de la Lista*/
+.lista-ministerios .ion-ios-flame {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.lista1, .lista2 {
+  display: inline-block;
+  padding: 20px;
+  width: 40%;
+}
+
+/*-- Poster --*/
+.poster {
+  text-align: center;
+}
+
+.poster img {
+  border-radius: 5px;
+  height: 100%;
+  max-height: 360px;
+  max-width: 700px;
+  width: 100%;
+}
+
+/*Motivo de Oracion*/
+.motivo_Oracion {
+  /*titulo despues del poster*/
+  font-size: 2.7em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*Mensaje de Oracion*/
+.mensaje {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.consejoMensaje {
+  text-align: center;
+  font: 300 2.5em "Roboto";
+}
+
+.arreglo_btn {
+  /*arreglo del boton de enviar motivo de oracion*/
+  width: 90%;
+}
+
+/*--------------------------------------------------
+  Tooltips a mi manera
+--------------------------------------------------*/
+.tooltip {
+  display: inline;
+  position: relative;
+}
+
+.tooltip:hover:after {
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 4px solid #00000a;
+  color: #f2f2f2;
+  content: attr(title);
+  font: 300 italic 16px "Roboto", Segoe UI;
+  text-align: center;
+  padding: 5px 15px;
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 90px;
+  z-index: 1000;
+}
+
+.tooltip:hover:before {
+  content: "";
+  border: solid;
+  border-color: #00000a  transparent transparent transparent;
+  border-width: 7px;
+  position: absolute;
+  top: -12px;
+  left: 17px;
+  z-index: 1000;
+}
+
+/*arreglo de tooltip*/
+.acerca-de .tooltip2 {
+  /*
+    Esto sera mientras tanto
+    cuando duncione borrar
+    todo de tooltip2
+  */
+  display: inline;
+  position: relative;
+}
+
+.acerca-de .tooltip2:hover:after {
+  background: rgba(255, 255, 255, 0.85);
+  border-left: 4px solid #fff;
+  color: #00000a;
+  content: "Por los momentos no esta Disponible";
+  font: 400 italic 18px "Roboto", Segoe UI;
+  position: absolute;
+  top: -2px;
+  left: 120px;
+  padding: 5px 15px;
+  text-align: center;
+  width: 320px;
+}
+
+.acerca-de .tooltip2:hover:before {
+  content: "";
+  border: solid;
+  border-color: #fff  transparent transparent transparent;
+  border-width: 7px;
+  position: absolute;
+  top: 7px;
+  left: 106px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 1000;
+}
+
+/*----------------------------------------------------------------------------------------------------
+  Modal de informacion -> pagina de prueba
+----------------------------------------------------------------------------------------------------*/
+#modalInfo {
+  background: rgba(0, 0, 0, 0.5);
+  /*Quizas lo quite*/
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  visibility: hidden;
+  /*Animacion*/
+  animation: delay 0s 5s forwards;
+  /*nombre del efecto duracion retrazo y el otro es para que mantenga visible el efecto*/
+  -webkit-animation: delay 0s 5s forwards;
+}
+
+/*-- contenedor de la modal info --*/
+.modal-contenedor {
+  background: #f2f2f2;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35%;
+  margin: 10% auto;
+  padding: 20px;
+  position: relative;
+  width: 40%;
+  /*-- animacion --*/
+  -webkit-animation-name: efecto_modal;
+  /*Chrome, Opera, Safari*/
+  -webkit-animation-duration: 0.4s;
+  /*Chrome, Opera, Safari*/
+  -webkit-animation-name: efecto_modal;
+          animation-name: efecto_modal;
+  /*standar*/
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  /*standar*/
+}
+
+/*-- haciendo el triangulo de la modal info --*/
+.modal-contenedor:before {
+  content: "";
+  border: solid;
+  border-color: #f2f2f2 transparent transparent transparent;
+  border-width: 15px;
+  position: absolute;
+  top: -30px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/*-- informacion de la modal info --*/
+#modalInfo .modal-contenedor p {
+  margin: 20px 10px;
+  font: lighter 1.8em Roboto;
+  text-align: justify;
+}
+
+/*-- boton de la modal info --*/
+#modalInfo .modal-contenedor button {
+  background: transparent;
+  border: 1px solid #08c40f;
+  color: #08c40f;
+  cursor: pointer;
+  float: right;
+  font: 400 italic 1.8em Roboto;
+  outline: none;
+  padding: 10px;
+  transition: .7s;
+  width: 30%;
+  margin: 0em 1em 1em 1em;
+}
+
+/*-- EFecto del boton --*/
+#modalInfo .modal-contenedor button:active {
+  background: #08c40f;
+  border: 1px solid #08c40f;
+  color: #f2f2f2;
+  -webkit-transform: scale(0.9, 0.9);
+      -ms-transform: scale(0.9, 0.9);
+          transform: scale(0.9, 0.9);
+}
+
+/*-- Animaciones --*/
+/*Chrome, Opera, Safari*/
+@-webkit-keyframes efecto_modal {
+  from {
+    top: -400px;
+    opacity: 0;
+  }
+  /*Desde*/
+  to {
+    top: 0px;
+    opacity: 1;
+    /*hasta*/
+  }
+}
+
+/*Standard*/
+@keyframes efecto_modal {
+  /*Desde*/
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  /*hasta*/
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes delay {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes delay {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+header .contenedor-info {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+header .contenedor-info .info-datos {
+  background: #ECf0f1;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+header .contenedor-info .info-datos li {
+  font: lighter 1.6em "Roboto", Segoe  UI, Sans-Serif;
+  /*letra fina 18px fuente Roboto*/
+  padding: 10px;
+  /*Margenes internos de lso Items*/
+  width: 28%;
+  /*Tamaño de los Items */
+}
+
+/*icons*/
+header .contenedor-info .info-datos li span {
+  margin-right: 10px;
+  font-size: 1em;
+  /*tamaño de los icons*/
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------
+  Menu para el Escritorio
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 801px) {
+  /*-- Menu-bar Desactivando(el contenedor del botom del menu y icono de Hamburguesa) --*/
+  .menu_bar {
+    display: none;
+  }
+  /*-- Menu para el Escritorio --*/
+  header {
+    position: relative;
+  }
+  /*-- Logo Del Menu --*/
+  header #menu .logo {
+    float: left;
+    max-width: 70px;
+    width: 100%;
+  }
+  /*-- Titulo --*/
+  header #menu h1 {
+    color: #fff;
+    font: 300 2.4em "Roboto", Segoe UI, Sans-Serif;
+    float: left;
+    margin-right: 27%;
+  }
+  /*-- Menu --*/
+  header #menu {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    margin-top: 32.5%;
+    width: 100%;
+    z-index: 1000;
+  }
+  header #menu ul {
+    padding-top: 10px;
+  }
+  header #menu ul .list {
+    display: inline-block;
+    position: relative;
+    /*transicion del efecto*/
+    transition: .2s;
+  }
+  header #menu ul .list a {
+    color: #fff;
+    display: inline-block;
+    font: lighter 1.6em "Roboto",Segoe UI;
+    padding: 10px;
+    /*transicion*/
+    transition: .2s;
+  }
+  /*efecto de "a && li"*/
+  header #menu ul a:hover {
+    /*background:#1a95d5;*/
+  }
+  header #menu ul .list:active {
+    /*transformacion*/
+    -webkit-transform: scale(0.9, 0.9);
+    -ms-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  /*iconos*/
+  header #menu ul .list a span {
+    margin-right: 5px;
+  }
+  /*icono del Sub-menu(es una flechita && unos puntitos)*/
+  header #menu .caret {
+    float: right;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  /*-- SubMenu --*/
+  header #menu #sub-menu {
+    position: absolute;
+  }
+  header #menu #sub-menu .children {
+    background: #fff;
+    border-radius: 3px;
+    display: none;
+    /*lo desaparecemos para hacer por Jquery*/
+    padding: 0;
+    z-index: 1000;
+  }
+  header #menu #sub-menu .children li {
+    display: block;
+  }
+  header #menu #sub-menu .children li a {
+    color: #000;
+    display: block;
+    /*padding-left:55px;*/
+    /*padding-left:35px;*/
+    transition: .2s;
+  }
+  header #menu #sub-menu .children li a:hover {
+    background: #1a95d5;
+    color: #fff;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------
+  Corrigiendo Errores del menu de Escritorio
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 1240px) {
+  header #menu {
+    margin-top: 32.2%;
+  }
+  header #menu h1 {
+    margin-right: 25%;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  header #menu {
+    margin-top: 32%;
+  }
+  header #menu h1 {
+    margin-right: 21%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header #menu {
+    margin-top: 31.5%;
+  }
+  header #menu h1 {
+    margin-right: 18%;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  header #menu h1 {
+    margin-right: 15%;
+  }
+}
+
+@media screen and (max-width: 1038px) {
+  header #menu {
+    margin-top: 31%;
+  }
+  header #menu h1 {
+    margin-right: 13%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header #menu {
+    margin-top: 31%;
+  }
+  header #menu h1 {
+    margin-right: 11%;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------
+  menu-adaptable afectara tanto mobile && tablet
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 800px) {
+  body {
+    margin-top: 64px;
+  }
+  /*Logo y nombre de la Pagina*/
+  header #menu .logo {
+    /*Desactivar en la version mobile/tablet*/
+    display: none;
+  }
+  header #menu h1 {
+    /*Desactivar en la version mobile/tablet*/
+    display: none;
+  }
+  header #menu {
+    /*Es cero poruqe el otro menu es margin-top 32.5%*/
+    margin: 0;
+    /* y como afecta este Segmento hay que llevarlo a 0*/
+  }
+  /*!
+   * Menu-bar (este es el contenedor del botom del menu y icono de Hamburguesa)
+   */
+  /*contenedor*/
+  .menu_bar {
+    background: #00000a;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  /*botom menu(Enlace)*/
+  .menu_bar .boton-bar {
+    color: #fefefe;
+    font: lighter 3em "Roboto", Segoe UI, Sans-Serif;
+    float: left;
+    padding: 15px;
+  }
+  /*contenedor del Icono de Hamburguesa*/
+  .menu_bar .icon-menu {
+    cursor: pointer;
+    float: right;
+    margin-top: 10px;
+    /*lo agregue por que se habia desacoplado*/
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  /*Barras para el Icono de hambuerguesa*/
+  .menu_bar .icon-menu .bar1, .bar2, .bar3 {
+    background: #fefefe;
+    border-radius: 5px;
+    height: 5px;
+    margin: 6px 0;
+    width: 35px;
+    /*35px*/
+    transition: .4s;
+  }
+  /*Class Change que luego se llamara por JS*/
+  .change .bar1 {
+    /*barra 1*/
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    -ms-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .change .bar2 {
+    /*barrra 2*/
+    opacity: 0;
+  }
+  .change .bar3 {
+    /*barra 3*/
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    -ms-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+  }
+  /*|
+    * Menu Adaptable(sera solo para mobile && tablet)
+    */
+  /*menu adaptable*/
+  .menu-adaptable {
+    background: #000;
+    height: calc(100% - 65px);
+    overflow: scroll;
+    position: fixed;
+    /*top:0;*/
+    /*right:100%;*/
+    width: 70%;
+    z-index: 1000;
+    /*-- Sombras --*/
+    box-shadow: 3px 0px 4px rgba(0, 0, 0, 0.14), 2px 0px 6px rgba(0, 0, 0, 0.2);
+  }
+  /*lista del menu*/
+  .menu-adaptable ul .list {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    overflow: hidden;
+    position: relative;
+    /*transicion del efecto*/
+    transition: .2s;
+  }
+  /*enlace del menu*/
+  .menu-adaptable ul .list a {
+    color: #fff;
+    font: lighter 2em "Roboto", Segoe UI;
+    /*18px*/
+    display: block;
+    padding: 15px;
+    transition: .2s;
+  }
+  /*efecto de "a && li"*/
+  .menu-adaptable ul a:hover {
+    background: #1a95d5;
+  }
+  .menu-adaptable ul .list:active {
+    /*transformacion*/
+    -webkit-transform: scale(0.9, 0.9);
+    -ms-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+  /*iconos*/
+  .menu-adaptable ul .list a span {
+    font-size: 1em;
+    margin-right: 10px;
+    /*tamaño de la funete del icono*/
+  }
+  /*icono del Sub-menu(es una flechita && unos puntitos)*/
+  .menu-adaptable .caret {
+    float: right;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  /*|
+    * sub-menu
+    */
+  /*children es el submenu y #sub-menu es solo el contenedor*/
+  #sub-menu .children {
+    background: #fff;
+    display: none;
+    /*lo desaparecemos para hacer por Jquery*/
+  }
+  /*lista del submenu*/
+  #sub-menu .children li {
+    display: block;
+  }
+  /*enlace del submenu*/
+  #sub-menu .children li a {
+    color: #000;
+    display: block;
+    padding-left: 55px;
+  }
+  /*efecto*/
+  #sub-menu .children li a:hover {
+    color: #fff;
+  }
+  /*|
+     *  Icono de tablet y SmartPhone
+     */
+  .icon-mobile {
+    display: none;
+  }
+  .icon-tablet {
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /*|
+   *  Icono de tablet y SmartPhone
+   */
+  .icon-mobile {
+    display: inline;
+  }
+  .icon-tablet {
+    display: none;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------
+  Contenedores Principales
+------------------------------------------------------------------------------------------------------------*/
+footer, header, section.main {
+  display: block;
+  width: 100%;
+}
+
+/*-- Pie de pagina --*/
+footer {
+  background: #FF530D;
+  /*margin-top:15px;*/
+  display: block;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+/*-- Seccion Principal --*/
+section.main {
+  background: #fff;
+  border-top: 5px solid #FF530D;
+  /*linea superior naranja*/
+  margin-top: 37.6%;
+  overflow: hidden;
+  width: 100%;
+}
+
+/*Contenedor de contenido y barra lateral*/
+section.main .box-main {
+  /*background: red;*/
+  display: block;
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+  width: 100%;
+  /*|.box-main
+   *  Este contendor existe para tener mayor control, tanto en el  contenido como en la barra lateral
+   * hay que recordar que section.main tambien es padre pero en este caso quiero mantener .welcome al
+   * 100% y el contenido y la barra no lo quiero al 100% por eso este .box-main
+   */
+}
+
+/*-- Barra Lateral --*/
+section.main .barra-lateral {
+  /*background:#d2d4d2;*/
+  /*display:inline-block;*/
+  float: left;
+  text-align: center;
+  width: 25%;
+  padding-top: 20px;
+}
+
+/*-- Contenido --*/
+section.main .contenido {
+  /*background:#0b99df;*/
+  /*display:inline-block;*/
+  float: left;
+  vertical-align: top;
+  width: 75%;
+  margin-bottom: 1em;
+  /*10px*/
+}
+
+/*-- Eventos --*/
+section.main .eventos {
+  background: #000;
+  /*por ahora*/
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding: 20px 0px;
+}
+
+/*------------------------------------------------------------------------------------------------------------
+  .contenedor y row es para tener Mayor control de la Pagina y de su Contenido
+------------------------------------------------------------------------------------------------------------*/
+/*--- Contenedor ---*/
+.contenedor {
+  margin: 0 auto;
+  max-width: 1280px;
+  /*por ahora*/
+  overflow: hidden;
+  width: 100%;
+}
+
+/*--- Fila de Grid ---*/
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*--- Todas las Columnas ---*/
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+/*--- Columnas ---*/
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/*-------------------------------------------------------------------------------------------------
+  @Meadia Querys
+-------------------------------------------------------------------------------------------------*/
+/*--- Tablet(Horizonal) ---*/
+@media screen and (max-width: 1024px) {
+  /*-- info --*/
+  header .contenedor-info .info-datos li {
+    /*afecta la fuenta de info*/
+    color: #fff;
+    font-size: 15px;
+  }
+  /*-- cambiamos Style de info --*/
+  header .contenedor-info .info-datos {
+    background: #FF530D;
+  }
+  /*-- Barra Lateral --*/
+  section.main .barra-lateral {
+    width: 30%;
+    width: 100%;
+  }
+  /*-- Contenido ---*/
+  section.main .contenido {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  /*-- Streaming --*/
+  .contenido .streaming {
+    margin: 0 auto;
+    width: 100%;
+    height: 380px;
+  }
+  /*-- Alineado Sub-titulos h2 --*/
+  .contenido h2 {
+    margin-left: 10%;
+    text-align: left;
+  }
+  /*-- Contenedor --*/
+  .contenedor {
+    background: #000;
+    width: 100%;
+    max-width: 1024px;
+  }
+  /*-- Columnas for Tablet --*/
+  .col-m-1 {
+    width: 8.33%;
+  }
+  .col-m-2 {
+    width: 16.66%;
+  }
+  .col-m-3 {
+    width: 25%;
+  }
+  .col-m-4 {
+    width: 33.33%;
+  }
+  .col-m-5 {
+    width: 41.66%;
+  }
+  .col-m-6 {
+    width: 50%;
+  }
+  .col-m-7 {
+    width: 58.33%;
+  }
+  .col-m-8 {
+    width: 66.66%;
+  }
+  .col-m-9 {
+    width: 75%;
+  }
+  .col-m-10 {
+    width: 83.33%;
+  }
+  .col-m-11 {
+    width: 91.66%;
+  }
+  .col-m-12 {
+    width: 100%;
+  }
+  /*--- Foot ---*/
+  .foot h3 {
+    font-size: 20px;
+  }
+  .foot ul li a {
+    font-size: 15px;
+  }
+}
+
+/*-- Tablet(Vertical) --*/
+@media screen and (max-width: 800px) {
+  /*-- Nuevo Diseño de Footer --*/
+  footer {
+    padding: 0;
+  }
+  .foot {
+    background: #FF530D;
+    padding: 0px;
+    line-height: 2;
+    width: 100%;
+    height: 80px;
+    transition: .4s;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  .foot:hover {
+    height: 240px;
+  }
+  /*flechas de foot*/
+  .foot .ion-chevron-down {
+    font-size: 16px;
+    float: right;
+    margin-top: 8px;
+    display: inline;
+  }
+  .foot h3 {
+    cursor: pointer;
+    display: block;
+    font-size: 2.2em;
+    padding: 20px;
+    text-align: left;
+  }
+  .foot ul {
+    background: #fefefe;
+  }
+  .foot ul li a {
+    color: #000;
+    font-size: 1.8em;
+    transition: .4s;
+  }
+  .foot ul li a:active {
+    -webkit-transform: scale(0.9, 0.9);
+        -ms-transform: scale(0.9, 0.9);
+            transform: scale(0.9, 0.9);
+  }
+  .foot .Ministerio {
+    padding: 20px 0%;
+    /*font-size:1.25em;*/
+  }
+  .foot .Etiquetas {
+    padding: 20px 0%;
+    /*font-size:1.25em;*/
+  }
+  .foot .Habla-con-Nosotros {
+    /*Corrigiendo el Margen*/
+    padding: 20px 22%;
+    padding: 20px 0%;
+    /*font-size:1.25em;*/
+  }
+  /*Listas de los Ministerios*/
+  .lista-ministerios {
+    margin-left: 30px;
+    font-size: 1.6em;
+  }
+  /*-- Listas de .one-page --*/
+  .lista1, .lista2 {
+    display: block;
+    width: 100%;
+  }
+  /*-- Esto afectara tanto tablets como mobiles --*/
+  section.main .barra-lateral,
+  section.main .contenido {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  /*-- Streaming --*/
+  section.main .contenido .streaming {
+    margin: 0 auto;
+    width: 100%;
+    height: 380px;
+  }
+  /*-- Alineado Sub-titulos h2 --*/
+  .contenido h2 {
+    margin-left: 10%;
+    text-align: left;
+  }
+  /*Aqui ocultamos info*/
+  .contenedor-info .info-datos {
+    display: none;
+    /*ya no lo queremos aqui*/
+  }
+  /*botones de reproductores*/
+  .video_btn, .live_btn {
+    width: 80%;
+  }
+  /*Arreglo del boton En vivo*/
+  .activoLive {
+    width: 80%;
+  }
+  /*
+      modal de informacion que la pagina es Beta
+      esto sera temporal...
+   */
+  .modal-contenedor {
+    height: auto;
+    width: 80%;
+    max-width: 100%;
+  }
+}
+
+/*--- Mobile(SmartPhone) ---*/
+@media screen and (max-width: 600px) {
+  /*-- Streaming --*/
+  section.main .contenido .streaming {
+    height: 240px;
+  }
+  /*-- contenido --*/
+  .contenido h2 {
+    margin-left: 10%;
+    font-size: 2.4em;
+  }
+  /*-- Eventos --*/
+  .eventos h2 {
+    font-size: 2.4em;
+    /*24px*/
+  }
+  /*
+     modal de informacion que la pagina es Beta
+     esto sera temporal...
+  */
+  /*.modal-contenedor{
+     //height:auto;
+     //max-height:600px;
+     //width:60%;
+  }*/
+}
+
+@media screen and (max-width: 460px) {
+  .acerca-de {
+    margin-left: 10px;
+    width: 100%;
+  }
+  .redes-sociales {
+    float: left;
+  }
+  /*temporal*/
+  .modal-contenedor {
+    height: auto;
+    width: 80%;
+    max-width: 100%;
+  }
+  #modalInfo .modal-contenedor button {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/*--- Slider Principal ---*/
+#slider {
+  /*contenedor Padre*/
+  /*display:none;*/
+  position: relative;
+  height: auto;
+  width: 100%;
+}
+
+#slider img {
+  /*child de .slider*/
+  border-bottom: 2px solid rgba(0, 0, 0, 0.95);
+  /*height:460px;*/
+  /*esto es para la segunda version de la pagina ojo no sera
+    definido por css sino que la imagen tendra por defecto esa altura */
+  position: absolute;
+  width: 100%;
+}
+
+/*--- Banner Principal ---*/
+#banner {
+  /*contenedor Padre*/
+  /*display:none;*/
+  width: 100%;
+}
+
+#banner img {
+  /*child de .slider*/
+  border-bottom: 2px solid rgba(0, 0, 0, 0.95);
+  position: absolute;
+  width: 100%;
+}
+
+/*Campos y Enviar Mensaje*/
+input[type="text"], [type="email"], [type="submit"] {
+  display: block;
+  font: 400 italic 1.8em "Roboto", Segoe Print;
+  height: 40px;
+  margin: 5px auto;
+  opacity: .70;
+  padding: 0px 10px;
+  transition: .2s;
+  width: 95%;
+}
+
+/*Al hacer Click*/
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline-color: #00b6f1;
+  opacity: 1;
+}
+
+/*Enviar Mensaje*/
+input[type="submit"] {
+  /*Boton de enviar*/
+  background: transparent;
+  border: 1px solid #00b6f1;
+  color: #00b6f1;
+  cursor: pointer;
+  outline: none;
+  opacity: 1;
+  /*Para eliminar la opacidad que esta mas arriba*/
+  transition: ease 1s;
+  width: 100%;
+}
+
+input[type="submit"]:hover {
+  /*Boton de enviar*/
+  background: #00b6f1;
+  color: #f2f2f2;
+}
+
+/*Mensaje / Comentario*/
+textarea[name="mensaje_txt"] {
+  display: block;
+  font: 400 italic 1.8em "Roboto", Segoe Print;
+  height: 75px;
+  margin: 5px auto;
+  max-height: 120px;
+  max-width: 100%;
+  padding: 10px;
+  transition: height .2s;
+  width: 95%;
+}
+
+/*Al hacer Click*/
+textarea[name="mensaje_txt"]:focus {
+  height: 120px;
+  max-height: 120px;
+  outline-color: #00b6f1;
+  opacity: 1;
+}
+
+/*Id*/
+#contentModal {
+  /*Content the Modal*/
+  background: #fefefe;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  margin: 5% auto;
+  text-align: center;
+  padding: 5px;
+  position: relative;
+  width: 40%;
+  /*Animación*/
+  -webkit-animation: zoom .6s;
+  animation: zoom .6s;
+}
+
+#contentModal:before {
+  content: "";
+  border: solid;
+  border-color: transparent #f2f2f2 transparent transparent;
+  border-width: 15px;
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#modal {
+  /*The Modal*/
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  /*para que este oculto por Defecto*/
+  height: 100%;
+  overflow: auto;
+  /* Enable scroll if needed */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.close {
+  color: #f2f2f2;
+  cursor: pointer;
+  float: right;
+  font-size: 2.8em;
+  margin: 1% 2%;
+  opacity: .8;
+  transition: .4s;
+}
+
+.close:hover, .close:focus {
+  opacity: 1;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+/*Encabezao de la modal*/
+.headerModal {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+/*titulo Modal*/
+.headerModal h1 {
+  font: 300 3.3em "Roboto", Segoe UI;
+  color: #333;
+  display: block;
+  text-align: left;
+  /*Modificacion por causa de style con otro css*/
+  margin-top: 25px;
+}
+
+/*logotipo*/
+.headerModal .logotipo {
+  float: left;
+  /*Modificacion por causa de style con otro css*/
+  margin-left: -40px;
+  margin-right: 15px;
+}
+
+/*titulo span*/
+.headerModal .title {
+  font: lighter 2em Roboto;
+  color: #666;
+  display: block;
+  text-align: left;
+  /*Modificacion por causa de style con otro css*/
+  margin-top: -25px;
+  width: 70%;
+  padding: 5px;
+}
+
+/*Responsive Desing*/
+@media screen and (max-width: 420px) {
+  form, textarea {
+    margin: 0px 20px;
+    text-align: center;
+  }
+  #contentModal {
+    margin: 15% auto;
+    width: 100%;
+  }
+  .headerModal h1 {
+    font-size: 2.4em;
+  }
+  .headerModal .title {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #contentModal {
+    margin: 5% auto;
+    width: 82%;
+  }
+  .headerModal {
+    max-height: 140px;
+    min-height: 100px;
+  }
+  .headerModal .title {
+    font-size: 1.6em;
+  }
+}
+
+/*Animaciones*/
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes slideTop {
+  from {
+    opacity: 0;
+    top: -700px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@keyframes slideTop {
+  from {
+    opacity: 0;
+    top: -400px;
+  }
+  to {
+    opacity: 0;
+    top: 0px;
+  }
+}

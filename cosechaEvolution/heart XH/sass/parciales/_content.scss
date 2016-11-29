@@ -1,0 +1,557 @@
+/*---------------------------------------------------------------------------------------------------------
+  Barra Lateral
+-----------------------------------------------------------------------------------------------------------*/
+/*-- Barra Lateral --*/
+.barra-lateral figure,.bl-congreso {
+  display:inline-block;
+  margin:0 auto;
+  padding-top:30px;
+  padding-left:1em;
+  padding-right:1em;
+  text-align:center;
+}
+/*-- Imagenes de Barra Lateral --*/
+.barra-lateral figure img{
+  border-radius:5px;
+  max-width:220px;
+  transition: .4s;
+  width: 100%;
+}
+.barra-lateral figure img:hover{
+  box-shadow:5px 0px 15px rgba(0,0,0, .3), inset 0px 0px 15px rgba(0,0,0, .5) ;
+  opacity: .8;
+  /*transform:translateY(5px);*/
+}
+.barra-lateral figure img:active{
+  transform: scale(.9,.9);
+}
+
+/*temporal iframe*/
+.bl-congreso {
+  border-radius:5px;
+  max-width:220px;
+  transition: .4s;
+  width: 100%;
+}
+
+/*---------------------------------------------------------------------------------------------------------
+  Contenido
+-----------------------------------------------------------------------------------------------------------*
+/*contenido*/
+.contenido{
+  border-bottom: 1px solid #c3c3c3;
+}
+/*titulo*/
+.contenido h2 {
+  margin-left: 2%;
+  padding-top: 30px;
+}
+/*reproductor de streaming*/
+.contenido .streaming {
+  /*demas*/
+  background:#000;
+  color:#fefefe;
+  min-height: 240px;
+  height:361px;
+  max-height: 80%;
+  /*top, right, bottom, left*/
+  margin:1em 0px 1em 1.875em;
+  width:720px;
+  max-width: 80%;
+}
+/*Reproductor de Video*/
+.contenido .streaming iframe{
+  box-shadow: 0px 0px 20px rgba(0,0,0,.25);
+  width: 100%;
+  height: 100%
+}
+.contenido .streaming p{
+  /*demas*/
+  font-size:3.2em;
+  padding:150px 0px;
+  text-align:center;
+}
+
+/*-- botones --*/
+.video_btn, .live_btn{
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  font: 400 italic 1.8em Roboto;
+  outline: none;
+  padding: 10px;
+  transition: .7s;
+  width: 30%;
+  margin: 0em 1em 1em 1em;
+}
+.video_btn{
+  /*boton de Enzeñanza de la Semana*/
+  border: 1px solid #f45e21;
+  color:#f45e21;
+}
+.live_btn{
+  /*boton de Streaming(Radio)*/
+  border:1px solid #fa2e2e;
+  color: #fa2e2e;
+}
+/*Efectos*/
+.live_btn:hover{
+  background: #fa2e2e;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, .2);
+  color: #fefefe;
+}
+.video_btn:hover{
+  background: #FF530D;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, .2);
+  color: #fefefe;
+}
+/*Style al Activar boton*/
+.activoLive{
+  background:#fa2e2e;
+  border:1px solid #fa2e2e;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, .2);
+  color: #fefefe;
+  font: 300 1.8em Roboto;
+  outline: none;
+  padding: 10px;
+  width: 30%;
+  margin: 0em 1em 1em 1em;
+}
+.activoVideo{
+  background: #FF530D;
+  border:1px solid #FF530D;
+  box-shadow: 3px 10px 10px rgba(0, 0, 0, .2);
+  color: #fefefe;
+  font:300 1.8em Roboto;
+  outline: none;
+  padding: 10px;
+  width: 30%;
+}
+/*Reproducotres*/
+.Play{
+  /*Contenedor de Enseñanza de la Semana*/
+  margin-bottom:0;
+  display: block; /*by default*/
+  padding-bottom: 1.6em;
+}
+.streamingLive{
+  /*Contenedor del Straming Radio en vivo*/
+  display: none; /*by default*/
+  padding-bottom: 1.6em;
+}
+
+/*---------------------------------------------------------------------------------------------------------
+  Eventos
+-----------------------------------------------------------------------------------------------------------*
+/*SlideShow Eventos*/
+.eventos h2 {
+  color:#000;
+  color:#fff;
+  text-align:center;
+  padding: 20px;
+}
+
+/*Categorias de los eventos*/
+.eventos .box-eventos {
+  /*Contenedor de las categorias*/
+  display:block;
+  margin:0px auto;
+  max-width:1280px;
+  padding:20px 0px;
+  text-align:center;
+  width:100%;
+}
+.eventos .box-eventos .categoria {
+  display:inline-block;
+  margin:0 auto;
+  padding:1em;
+}
+.eventos .box-eventos .categoria img {
+  border-radius:5px;
+  max-width:220px;/*tamaño Original del Poster*/
+  transition: .4s;
+  width:100%;
+}
+.eventos .box-eventos .categoria img:hover {
+  box-shadow:5px 0px 15px rgba(0,0,0, .3), inset 0px 0px 15px rgba(0,0,0, .5);
+  /*opacity: .8; lo quitamos por el color naranja*/
+  transform:translateY(-5px);
+}
+.eventos .box-eventos .categoria img:active{
+  transform: scale(.9,.9);
+}
+
+/*--------------------------------------------------------------------------------------------------------
+  Pie de pagina
+---------------------------------------------------------------------------------------------------------*/
+.foot h3{
+  color:#ECF0F1;
+  font-weight:300;
+  text-align:center;
+}
+.foot ul li a {
+  color:#ECF0F1;
+  display:block;
+  font:300 1.6em 'Roboto', Segoe UI, Sans-Serif;
+  padding:5px;
+  text-align:justify;
+  transition: .4s;
+}
+.foot ul li a:hover{
+  transform: translateX(5px);
+}
+/*--- Clases del Contenedor .foot ---*/
+.foot .Ministerio{
+  padding:20px 33%;
+}
+.foot .Etiquetas{
+  padding-top: 20px;
+  padding-left: 33%;
+}
+.foot .Habla-con-Nosotros{
+  padding:20px 15%;
+  width: 100%;
+}
+
+/*flechas de foot*/
+.foot .ion-chevron-down{
+  font-size:1.6em;
+  display:none;
+}
+
+/*-----------------------------------------------------------------------------------------------------------
+  Derechos de Autor
+------------------------------------------------------------------------------------------------------------*/
+/*--- .Autores ---*/
+.autores {
+  background:#00000a;
+  float:left;
+  /*margin-top:20px;*/
+  max-width:1280px;
+  /*overflow:hidden;*/
+  /*padding:5px;*/
+  width:100%;
+}
+.acerca-de {
+  padding:15px 30px;
+  position:relative;
+  float:left;
+  margin-left:60px;/*temporal*/
+}
+.acerca-de li a {
+  color:#777;/*blanco*/
+  font-size:2em;
+  float:left;
+  margin-left:10px;
+  transition:.4s;
+}
+.acerca-de li a:hover{
+  color:#fff;
+}
+/*Estrellas*/
+.ion-ios-star, .ion-ios-star-outline{
+  /*Ahora son una*/
+  position: absolute;
+  left:15px;
+}
+.acerca-de li a .ion-ios-star{
+  /*estrella con relleno*/
+  opacity: 0;
+  transition:.6s;
+}
+.acerca-de li a .ion-ios-star-outline{
+  /*estrella de linea*/
+  display:inline;
+  transition:.6s;
+}
+.acerca-de li a:hover .ion-ios-star-outline{
+  /*lo vamos a ocultar con la opacidad*/
+  opacity: 0;
+  transform: rotate(360deg);
+}
+.acerca-de li a:hover .ion-ios-star{
+  /*Ahora mostramos la estrella con relleno*/
+  opacity: 1;
+  transform: rotate(360deg);
+  /*A tráves de la Opacidad*/
+}
+
+/*--- Redes Sociales ---*/
+/*.redes-sociales(ul)*/
+.redes-sociales {
+  float:right;
+  margin-right:40px;
+  /*overflow:hidden;*/
+  padding:5px;
+}
+.redes-sociales  li {
+  float:left;
+  margin-left:5px;
+}
+.redes-sociales li a {
+  border-radius:50%;
+  color:#777;
+  display:block;
+  font-size:2em;
+  padding:10px 15px;
+  transition: ease .6s;
+  z-index:1000;
+}
+/*Efecto de las Redes sociales*/
+.redes-sociales li a:hover {
+  background:#FF530D;
+  color:#fff;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, .3), 0px 0px 30px rgba(0, 0, 0, .2);
+  transform: translateY(-2px);
+}
+
+/*--- © Copy Right ---*/
+.derechos-de-autor{
+  background:#fff;
+  float:left;
+  width:100%;
+}
+.derechos-de-autor h4{
+  color:#777;
+  font:400 1.6em "Roboto", Segoe UI, Sans-Serif;
+  padding:15px;
+  text-align:center;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------------
+  Contenido Principal
+------------------------------------------------------------------------------------------------------------*/
+.one-page{
+  margin:0 auto;
+  max-width:1000px;
+  /*padding:20px;*/
+  width:100%;
+}
+/*titulo de one-page*/
+.one-page h2{
+  padding-top:20px;
+}
+/*icono del titulo del contenido*/
+.one-page h2 .ion-arrow-right-b{
+  color:#FF530D;
+  margin-right:10px;
+}
+/*Listas de los Ministerios*/
+.lista-ministerios{
+  margin-left:50px;
+  font-size:1.6em;
+}
+/*Iconos de la Lista*/
+.lista-ministerios .ion-ios-flame{
+  font-size:1.5em;
+  margin-right: 10px;
+}
+
+.lista1, .lista2{
+  display:inline-block;
+  padding:20px;
+  width:40%;
+}
+/*-- Poster --*/
+.poster{
+  text-align: center;
+}
+.poster img{
+  border-radius:5px;
+  height:100%;
+  max-height:360px;
+  max-width: 700px;
+  width:100%;
+}
+/*Motivo de Oracion*/
+.motivo_Oracion{ /*titulo despues del poster*/
+  font-size: 2.7em;
+  text-align: center;
+  margin-bottom:10px;
+}
+/*Mensaje de Oracion*/
+.mensaje{
+  margin: 0 auto;
+  width: 95%;
+}
+.consejoMensaje{
+  text-align: center;
+  font: 300 2.5em "Roboto";
+}
+.arreglo_btn{
+  /*arreglo del boton de enviar motivo de oracion*/
+  width: 90%;
+}
+
+/*--------------------------------------------------
+  Tooltips a mi manera
+--------------------------------------------------*/
+.tooltip{
+  display: inline;
+  position: relative;
+}
+.tooltip:hover:after{
+  background:rgba(0,0,0,.5);
+  border-left: 4px solid #00000a;
+  color:#f2f2f2;
+  content:attr(title);
+  font:300 italic 16px "Roboto", Segoe UI;
+  text-align: center;
+  padding:5px 15px;
+  position:absolute;
+  top:-40px;
+  left:-40px;
+  width: 90px;
+  z-index:1000;
+}
+.tooltip:hover:before{
+  content:"";
+  border:solid;
+  border-color:#00000a  transparent transparent transparent;
+  border-width:7px;
+  position:absolute;
+  top:-12px;
+  left:17px;
+  z-index:1000;
+}
+
+/*arreglo de tooltip*/
+.acerca-de .tooltip2{
+  /*
+    Esto sera mientras tanto
+    cuando duncione borrar
+    todo de tooltip2
+  */
+  display: inline;
+  position: relative;
+
+}
+
+.acerca-de .tooltip2:hover:after{
+  background: rgba(255,255,255, .85);
+  border-left: 4px solid #fff;
+  color:#00000a;
+  content:"Por los momentos no esta Disponible";
+  font:400 italic 18px "Roboto", Segoe UI;
+  position: absolute;
+  top:-2px;
+  left:120px;
+  padding: 5px 15px;
+  text-align: center;
+  width: 320px;
+}
+.acerca-de .tooltip2:hover:before{
+  content:"";
+  border:solid;
+  border-color: #fff  transparent transparent transparent;
+  border-width:7px;
+  position:absolute;
+  top:7px;
+  left:106px;
+  transform:rotate(90deg);
+  z-index:1000;
+
+}
+
+/*----------------------------------------------------------------------------------------------------
+  Modal de informacion -> pagina de prueba
+----------------------------------------------------------------------------------------------------*/
+#modalInfo{
+  background: rgba(0, 0, 0, 0.5);/*Quizas lo quite*/
+  height: 100%;
+  width: 100%;
+  position:fixed;
+  top:0;
+  z-index: 2000;
+  visibility: hidden;
+
+  /*Animacion*/
+  animation: delay 0s 5s forwards;/*nombre del efecto duracion retrazo y el otro es para que mantenga visible el efecto*/
+  -webkit-animation: delay 0s 5s forwards;
+}
+
+/*-- contenedor de la modal info --*/
+.modal-contenedor{
+  background: #f2f2f2;
+  box-shadow: 0px 0px 20px rgba(0,0,0,.4);
+  display: flex;
+  height:35%;
+  margin:10% auto;
+  padding: 20px;
+  position: relative;
+  width:40%;
+
+  /*-- animacion --*/
+  -webkit-animation-name: efecto_modal;/*Chrome, Opera, Safari*/
+  -webkit-animation-duration: 0.4s;/*Chrome, Opera, Safari*/
+  animation-name: efecto_modal;/*standar*/
+  animation-duration: 0.4s;/*standar*/
+}
+
+/*-- haciendo el triangulo de la modal info --*/
+.modal-contenedor:before{
+  content:"";
+  border:solid;
+  border-color: #f2f2f2 transparent transparent transparent;
+  border-width: 15px;
+  position: absolute;
+  top:-30px;
+  transform: rotate(180deg);
+}
+
+/*-- informacion de la modal info --*/
+#modalInfo .modal-contenedor p{
+  margin: 20px 10px;
+  font: lighter 1.8em Roboto;
+  text-align: justify;
+}
+
+/*-- boton de la modal info --*/
+#modalInfo .modal-contenedor button{
+  background: transparent;
+  border: 1px solid #08c40f;
+  color:#08c40f;
+  cursor: pointer;
+  float:right;
+  font: 400 italic 1.8em Roboto;
+  outline: none;
+  padding: 10px;
+  transition: .7s;
+  width: 30%;
+  margin: 0em 1em 1em 1em;
+}
+
+/*-- EFecto del boton --*/
+#modalInfo .modal-contenedor button:active{
+  background: #08c40f;
+  border: 1px solid #08c40f ;
+  color:#f2f2f2;
+  transform: scale(.9,.9);
+}
+
+/*-- Animaciones --*/
+/*Chrome, Opera, Safari*/
+@-webkit-keyframes efecto_modal{
+  from{ top:-400px; opacity:0; }/*Desde*/
+  to{ top:0px; opacity:1;/*hasta*/
+  }
+}
+
+/*Standard*/
+@keyframes efecto_modal{
+  /*Desde*/
+  from { top: -300px; opacity: 0; }
+  /*hasta*/
+  to { top: 0px; opacity: 1; }
+}
+
+
+@-webkit-keyframes delay{
+  from{ opacity: 0; visibility: hidden; }
+  to{ opacity: 1; visibility: visible; }
+}
+@keyframes delay{
+  from{ opacity: 0; visibility: hidden; }
+  to{ opacity: 1; visibility: visible; }
+}

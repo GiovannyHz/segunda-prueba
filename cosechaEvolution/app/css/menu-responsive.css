@@ -1,0 +1,333 @@
+/*------------------------------------------------------------------------------------------------------------------------------------------
+  Menu para el Escritorio
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width:801px){
+  /*-- Menu-bar Desactivando(el contenedor del botom del menu y icono de Hamburguesa) --*/
+  .menu_bar{
+    display:none;
+  }
+  /*-- Menu para el Escritorio --*/
+   header{
+     position:relative;
+   }
+   /*-- Logo Del Menu --*/
+   header #menu .logo{
+     float:left;
+     max-width:70px;
+     width:100%;
+   }
+   /*-- Titulo --*/
+   header #menu h1{
+     color:#fff;
+     font:300 2.4em "Roboto", Segoe UI, Sans-Serif;
+     float:left;
+     margin-right:27%;
+   }
+   /*-- Menu --*/
+   header #menu{
+     background:rgba(0,0,0,.5);
+     position:absolute;
+     margin-top:32.5%;
+     width:100%;
+     z-index:1000;
+   }
+   header #menu ul{
+     padding-top:10px;
+   }
+   header #menu ul .list {
+     display:inline-block;
+     position:relative;
+     /*transicion del efecto*/
+     -webkit-transition: .2s;
+     -o-transition: .2s;
+     transition: .2s;
+   }
+   header #menu ul .list a {
+     color:#fff;
+     display:inline-block;
+     font:lighter 1.6em "Roboto",Segoe UI;
+     padding:10px;
+     /*transicion*/
+     -webkit-transition: .2s;
+     -o-transition: .2s;
+     transition: .2s;
+   }
+    /*efecto de "a && li"*/
+    header #menu ul  a:hover {
+      /*background:#1a95d5;*/
+    }
+    header #menu ul .list:active {
+      /*transformacion*/
+      -webkit-transform: scale(.9,.9);
+      -ms-transform: scale(.9,.9);
+      -o-transform: scale(.9,.9);
+      transform: scale(.9,.9);
+    }
+   /*iconos*/
+   header #menu ul .list a span {
+     margin-right:5px;
+   }
+   /*icono del Sub-menu(es una flechita && unos puntitos)*/
+   header #menu .caret{
+     float:right;
+     margin-top:3px;
+     margin-left:10px;
+     margin-right:10px;
+   }
+
+  /*-- SubMenu --*/
+  header #menu #sub-menu{
+    position:absolute;
+  }
+  header #menu #sub-menu .children{
+    background:#fff;
+    border-radius:3px;
+    display:none;/*lo desaparecemos para hacer por Jquery*/
+    padding:0;
+    z-index:1000;
+  }
+  header #menu #sub-menu .children li {
+    display:block;
+  }
+  header #menu #sub-menu .children li a{
+    color:#000;
+    display:block;
+    /*padding-left:55px;*/
+    /*padding-left:35px;*/
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+  }
+  header #menu #sub-menu .children li a:hover {
+    background:#1a95d5;
+    color:#fff;
+  }
+
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------
+  Corrigiendo Errores del menu de Escritorio
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:1240px){
+  header #menu{
+    margin-top:32.2%;
+  }
+  header #menu h1{
+    margin-right:25%;
+  }
+}
+@media screen and (max-width:1160px){
+  header #menu{
+    margin-top:32%;
+  }
+  header #menu h1{
+    margin-right:21%;
+  }
+}
+@media screen and (max-width:1100px){
+  header #menu{
+    margin-top:31.5%;
+  }
+  header #menu h1{
+    margin-right:18%;
+  }
+}
+@media screen and (max-width:1070px){
+  header #menu h1{
+    margin-right:15%;
+  }
+}
+@media screen and (max-width:1038px){
+  header #menu{
+    margin-top:31%;
+  }
+  header #menu h1{
+    margin-right:13%;
+  }
+}
+@media screen and (max-width:1024px){
+  header #menu{
+    margin-top:31%;
+  }
+  header #menu h1{
+    margin-right:11%;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------
+  menu-adaptable afectara tanto mobile && tablet
+------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+  body{
+    margin-top: 64px;
+  }
+  /*Logo y nombre de la Pagina*/
+  header #menu .logo {
+    /*Desactivar en la version mobile/tablet*/
+    display: none;
+  }
+  header #menu h1 {
+    /*Desactivar en la version mobile/tablet*/
+    display: none;
+  }
+  header #menu{
+    /*Es cero poruqe el otro menu es margin-top 32.5%*/
+    margin:0;
+    /* y como afecta este Segmento hay que llevarlo a 0*/
+  }
+  /*!
+   * Menu-bar (este es el contenedor del botom del menu y icono de Hamburguesa)
+   */
+   /*contenedor*/
+    .menu_bar{
+      background:#00000a;
+      overflow:hidden;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:1000;
+    }
+   /*botom menu(Enlace)*/
+    .menu_bar .boton-bar{
+      color:#fefefe;
+      font:lighter 3em "Roboto", Segoe UI, Sans-Serif;
+      float:left;
+      padding:15px;
+    }
+   /*contenedor del Icono de Hamburguesa*/
+    .menu_bar .icon-menu{
+      cursor:pointer;
+      float:right;
+      margin-top:10px;/*lo agregue por que se habia desacoplado*/
+      margin-right:20px;
+      margin-left:10px;
+    }
+   /*Barras para el Icono de hambuerguesa*/
+    .menu_bar .icon-menu .bar1,.bar2,.bar3{
+      background:#fefefe;
+      border-radius:5px;
+      height:5px;
+      margin:6px 0;
+      width:35px;/*35px*/
+      transition: .4s;
+    }
+   /*Class Change que luego se llamara por JS*/
+    .change .bar1{/*barra 1*/
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+      transform: rotate(-45deg) translate(-9px, 6px) ;
+    }
+
+    .change .bar2{ /*barrra 2*/
+      opacity:0;
+    }
+
+    .change .bar3{ /*barra 3*/
+      -webkit-transform: rotate(45deg) translate(-8px, -8px);
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+   /*|
+    * Menu Adaptable(sera solo para mobile && tablet)
+    */
+    /*menu adaptable*/
+     .menu-adaptable {
+       background:#000;
+       height:calc(100% - 65px);
+       overflow:scroll;
+       position:fixed;
+       /*top:0;*/
+       /*right:100%;*/
+       width:70%;
+       z-index:1000;
+       /*-- Sombras --*/
+       -webkit-box-shadow: 3px 0px 4px rgba(0,0,0,.14), 2px 0px 6px rgba(0,0,0,.2);
+               box-shadow: 3px 0px 4px rgba(0,0,0,.14), 2px 0px 6px rgba(0,0,0,.2);
+     }
+    /*lista del menu*/
+     .menu-adaptable ul .list {
+       border-bottom: 1px solid rgba(255,255,255, .1);
+       display:block;
+       overflow:hidden;
+       position:relative;
+       /*transicion del efecto*/
+       -webkit-transition: .2s;
+       -o-transition: .2s;
+       transition: .2s;
+     }
+    /*enlace del menu*/
+     .menu-adaptable ul .list a {
+       color:#fff;
+       font:lighter 2em "Roboto", Segoe UI;/*18px*/
+       display:block;
+       padding:15px;
+       -webkit-transition: .2s;
+       -o-transition: .2s;
+       transition: .2s;
+     }
+    /*efecto de "a && li"*/
+     .menu-adaptable ul  a:hover {
+        background:#1a95d5;
+      }
+     .menu-adaptable ul .list:active {
+        /*transformacion*/
+        -webkit-transform: scale(.9,.9);;
+        -ms-transform: scale(.9,.9);;
+        -o-transform: scale(.9,.9);;
+        transform: scale(.9,.9);;
+      }
+    /*iconos*/
+     .menu-adaptable ul .list a span {
+       font-size:1em;
+       margin-right:10px;/*tamaño de la funete del icono*/
+     }
+    /*icono del Sub-menu(es una flechita && unos puntitos)*/
+     .menu-adaptable .caret{
+       float:right;
+       margin-top:3px;
+       margin-left:10px;
+       margin-right:10px;
+     }
+   /*|
+    * sub-menu
+    */
+    /*children es el submenu y #sub-menu es solo el contenedor*/
+      #sub-menu .children{
+        background:#fff;
+        display:none;/*lo desaparecemos para hacer por Jquery*/
+      }
+    /*lista del submenu*/
+      #sub-menu .children li {
+        display:block;
+      }
+    /*enlace del submenu*/
+      #sub-menu .children li a{
+        color:#000;
+        display:block;
+        padding-left:55px;
+      }
+    /*efecto*/
+      #sub-menu .children li a:hover {
+        color:#fff;
+      }
+    /*|
+     *  Icono de tablet y SmartPhone
+     */
+     .icon-mobile{
+        display:none;
+     }
+     .icon-tablet{
+        display:inline;
+     }
+}
+
+@media screen and (max-width:600px) {
+  /*|
+   *  Icono de tablet y SmartPhone
+   */
+   .icon-mobile{
+      display:inline;
+   }
+   .icon-tablet{
+      display:none;
+   }
+}

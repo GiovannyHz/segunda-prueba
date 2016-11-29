@@ -1,0 +1,77 @@
+/*!
+ * Menu para Escritorio(Desktop)
+ */
+ #menu{
+   background:#000;
+
+   /*visibility:visible;*/
+
+   margin-top:67px;
+
+   position:absolute;
+   width:80%;
+   z-index:1000;
+   /*sombras*/
+   -webkit-box-shadow: 3px 0px 4px rgba(0,0,0,.14), 2px 0px 6px rgba(0,0,0,.2);
+   box-shadow: 3px 0px 4px rgba(0,0,0,.14), 2px 0px 6px rgba(0,0,0,.2);
+ }
+ #menu ul .list {
+   display:block;
+   overflow:hidden;
+   position:relative;
+   /*transicion del efecto*/
+   -webkit-transition: .2s;
+   -o-transition: .2s;
+   transition: .2s;
+ }
+ .menu-adaptable ul .list a {
+   color:#fff;
+   font:lighter 1.25em Roboto;/*18px*/
+   display:block;
+   padding:20px;
+   -webkit-transition: .2s;
+   -o-transition: .2s;
+   transition: .2s;
+ }
+  /*efecto de "a && li"*/
+  .menu-adaptable ul  a:hover {
+    background:#1a95d5;
+  }
+  .menu-adaptable ul .list:active {
+    /*transformacion*/
+    -webkit-transform: scale(.9,.9);;
+    -ms-transform: scale(.9,.9);;
+    -o-transform: scale(.9,.9);;
+    transform: scale(.9,.9);;
+  }
+/*iconos*/
+ .menu-adaptable ul .list a span {
+   font-size:17px;
+   margin-right:10px;/*tamaño de la funete del icono*/
+ }
+ /*icono del Sub-menu(es una flechita && unos puntitos)*/
+ .menu-adaptable .caret{
+   float:right;
+   margin-top:3px;
+   margin-left:10px;
+   margin-right:10px;
+ }
+/*|
+ *sub-menu
+ */
+#sub-menu .children{
+  background:#fff;
+  display:none;/*lo desaparecemos para hacer por Jquery*/
+}
+
+#sub-menu .children li {
+  display:block;
+}
+#sub-menu .children li a{
+  color:#000;
+  display:block;
+  padding-left:55px;
+}
+#sub-menu .children li a:hover {
+  color:#fff;
+}

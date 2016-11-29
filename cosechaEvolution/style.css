@@ -1,0 +1,62 @@
+/*Fuente Roboto*/
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic,300,300italic);
+/*
+ * Solo esta disponible normal(400), normal(400)italic, bold(700), bold(700)italic, light(300), light(300)italic.
+ */
+/*====================================================================================================*/
+* {
+  margin:0;
+  padding:0;
+  -webkit-box-sizing:border box;  /*-- Chrome, Opera, Safari, Vivaldi --*/
+  -moz-box-sizing:border box;  /*-- Mozilla --*/
+  box-sizing:border box;  /*-- Standar --*/
+}
+
+/*Seleccion de Texto*/
+::selection{
+  background:#fff;
+  color:#FF530D;
+}
+
+::-moz-selection{
+  background:#fff;
+  color:#FF530D;
+}
+
+a {
+  cursor:pointer;
+  text-decoration:none;
+}
+
+body {
+  background:#FEFEFE;
+  font-family:"Roboto", Segoe UI, Sans-Serif;
+  font-weight:lighter;
+  font-size:62.5%;
+}
+
+h2{
+  font-size:3.2em;/*32px*/
+  font-weight:300;
+}
+
+h3 {
+  font-size:2.4em;
+  font-weight:300;
+}
+
+ul {
+  list-style:none;
+}
+
+p{
+  font:300 1.6em "Roboto", Segoe UI, Sans-Serif;
+  line-height:1.5;
+  margin-bottom:1em;
+  text-align:justify;
+}
+
+main{
+  display: block;
+  padding:20px;
+}

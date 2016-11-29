@@ -1,0 +1,65 @@
+// _Base.scss, es una base General una fusion de Normalize y ED-Grid
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+	margin:0; padding:0;
+}
+
+::selection{											 	// Seleccion de Texto
+  background:#fff;
+  color:#FF530D;
+}
+
+::-moz-selection{
+  background:#fff;
+  color:#FF530D;
+}
+
+html{
+	font-size:62.5%;/*10px*/
+	-ms-text-size-adjust: 100%;				// normalize
+  -webkit-text-size-adjust: 100%;		// normalize
+}
+
+body{
+	background-color: $color_base;
+	color: $color_texto;
+	font: lighter 1rem $font;
+}
+
+img {																// Imágenes responsive
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+	cursor:pointer;
+  text-decoration: none;
+}
+
+h2{
+  font-size:3.2em;/*32px*/
+  font-weight:300;
+}
+
+h3 {
+  font-size:2.4em;
+  font-weight:300;
+}
+
+ul {
+	list-style:none;
+}
+
+p{
+  font:300 1.6em "Roboto", Segoe UI, Sans-Serif;
+  line-height:1.5;
+  margin-bottom:1em;
+  text-align:justify;
+}
+
+main{
+  display: block;
+  padding:20px;
+}

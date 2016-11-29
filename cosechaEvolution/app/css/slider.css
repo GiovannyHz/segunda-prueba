@@ -1,0 +1,28 @@
+/*--- Slider Principal ---*/
+#slider {/*contenedor Padre*/
+  /*display:none;*/
+  position:relative;
+  height:auto;
+  width:100%;
+}
+
+  #slider img {/*child de .slider*/
+    border-bottom: 2px solid rgba(0,0,0,.95);
+    /*height:460px;*//*esto es para la segunda version de la pagina ojo no sera
+    definido por css sino que la imagen tendra por defecto esa altura */
+    position:absolute;
+    width:100%;
+  }
+
+/*--- Banner Principal ---*/
+
+#banner {/*contenedor Padre*/
+  /*display:none;*/
+  width:100%;
+}
+
+  #banner img {/*child de .slider*/
+    border-bottom: 2px solid rgba(0,0,0,.95);
+    position: absolute;
+    width:100%;
+  }

@@ -1,0 +1,332 @@
+/*------------------------------------------------------------------------------------------------------------
+  Contenedores Principales
+------------------------------------------------------------------------------------------------------------*/
+footer,header,section.main{
+  display:block;
+  width:100%;
+}
+
+/*-- Pie de pagina --*/
+footer{
+  background:#FF530D;
+  /*margin-top:15px;*/
+  display:block;
+  overflow:hidden;
+  padding-top: 20px;
+}
+
+/*-- Seccion Principal --*/
+section.main{
+  background:#fff;
+  border-top:5px solid #FF530D;/*linea superior naranja*/
+  margin-top:37.6%;
+  overflow:hidden;
+  width:100%;
+}
+
+/*Contenedor de contenido y barra lateral*/
+section.main .box-main {
+  /*background: red;*/
+  display:block;
+  margin:0 auto;
+  max-width:1200px;
+  overflow:hidden;
+  width:100%;
+  /*|.box-main
+   *  Este contendor existe para tener mayor control, tanto en el  contenido como en la barra lateral
+   * hay que recordar que section.main tambien es padre pero en este caso quiero mantener .welcome al
+   * 100% y el contenido y la barra no lo quiero al 100% por eso este .box-main
+   */
+}
+
+/*-- Barra Lateral --*/
+section.main .barra-lateral{
+  /*background:#d2d4d2;*/
+  /*display:inline-block;*/
+  float:left;
+  text-align:center;
+  width:25%;
+  padding-top:20px;
+}
+
+/*-- Contenido --*/
+section.main .contenido{
+  /*background:#0b99df;*/
+  /*display:inline-block;*/
+  float:left;
+  vertical-align:top;
+  width:75%;
+  margin-bottom:1em;/*10px*/
+}
+
+/*-- Eventos --*/
+section.main .eventos{
+  //background:rgb(242, 129, 12); /*otro fondo*/
+  //background: #FF530D; /*otro fondo*/
+  background: #000; /*por ahora*/
+  margin-top:1em;
+  margin-bottom:1em;
+  //padding-bottom:1em;
+  padding: 20px 0px;
+
+}
+
+/*------------------------------------------------------------------------------------------------------------
+  .contenedor y row es para tener Mayor control de la Pagina y de su Contenido
+------------------------------------------------------------------------------------------------------------*/
+/*--- Contenedor ---*/
+.contenedor{
+  margin:0 auto;
+  //max-width:1920px;
+  max-width:1280px;/*por ahora*/
+  overflow:hidden;
+  width:100%;
+}
+/*--- Fila de Grid ---*/
+.row:after{
+  content:"";
+  clear:both;
+  display:block;
+}
+/*--- Todas las Columnas ---*/
+[class*="col-"]{
+  float:left;
+  padding:15px;
+}
+/*--- Columnas ---*/
+.col-1 { width:8.33%; }
+.col-2 { width:16.66%; }
+.col-3 { width:25%; }
+.col-4 { width:33.33%; }
+.col-5 { width:41.66%; }
+.col-6 { width:50%; }
+.col-7 { width:58.33%; }
+.col-8 { width:66.66%; }
+.col-9 { width:75%; }
+.col-10 { width:83.33%; }
+.col-11 { width:91.66%; }
+.col-12 { width:100%; }
+
+/*-------------------------------------------------------------------------------------------------
+  @Meadia Querys
+-------------------------------------------------------------------------------------------------*/
+/*--- Tablet(Horizonal) ---*/
+@media screen and (max-width:1024px) {
+    /*-- info --*/
+    header .contenedor-info .info-datos li{
+      /*afecta la fuenta de info*/
+      color:#fff;
+      font-size:15px;
+    }
+    /*-- cambiamos Style de info --*/
+    header .contenedor-info .info-datos {
+      background:#FF530D;
+    }
+    /*-- Barra Lateral --*/
+    section.main .barra-lateral{
+      width:30%;
+      width:100%;
+    }
+    /*-- Contenido ---*/
+    section.main .contenido {
+      margin: 0 auto;
+      text-align:center;
+      width:100%;
+    }
+    /*-- Streaming --*/
+    .contenido .streaming {
+     margin: 0 auto;
+     width: 100%;
+     height: 380px;
+    }
+    /*-- Alineado Sub-titulos h2 --*/
+    .contenido h2{
+      margin-left:10%;
+      text-align: left;
+    }
+    /*-- Contenedor --*/
+   .contenedor{
+     background: #000;
+     width:100%;
+     max-width:1024px;
+   }
+   /*-- Columnas for Tablet --*/
+   .col-m-1 { width:8.33%; }
+   .col-m-2 { width:16.66%; }
+   .col-m-3 { width:25%; }
+   .col-m-4 { width:33.33%; }
+   .col-m-5 { width:41.66%; }
+   .col-m-6 { width:50%; }
+   .col-m-7 { width:58.33%; }
+   .col-m-8 { width:66.66%; }
+   .col-m-9 { width:75%; }
+   .col-m-10 { width:83.33%; }
+   .col-m-11 { width:91.66%; }
+   .col-m-12 { width:100%; }
+   /*--- Foot ---*/
+   .foot h3 {
+     font-size:20px;
+   }
+   .foot ul li a {
+     font-size:15px;
+   }
+}
+/*-- Tablet(Vertical) --*/
+@media screen and (max-width:800px) {
+    /*-- Nuevo Diseño de Footer --*/
+    footer {
+      padding:0;
+    }
+    .foot{
+      background:#FF530D;
+      padding:0px;
+      line-height:2;
+      width:100%;
+      height:80px;
+      transition:.4s;
+      overflow:hidden;
+      z-index:1000;
+    }
+    .foot:hover{
+      height:240px;
+    }
+    /*flechas de foot*/
+    .foot .ion-chevron-down{
+      font-size:16px;
+      float:right;
+      margin-top: 8px;
+      display:inline;
+    }
+    .foot h3 {
+      cursor:pointer;
+      display:block;
+      font-size:2.2em;
+      padding:20px;
+      text-align:left;
+    }
+    .foot ul {
+      background:#fefefe;
+    }
+    .foot ul li a{
+      color:#000;
+      font-size:1.8em;
+      transition: .4s;
+    }
+    .foot ul li a:active{
+      transform:scale(.9,.9);
+    }
+    .foot .Ministerio{
+      padding:20px 0%;
+      /*font-size:1.25em;*/
+    }
+    .foot .Etiquetas{
+      padding:20px 0%;
+      /*font-size:1.25em;*/
+    }
+    .foot .Habla-con-Nosotros{
+      /*Corrigiendo el Margen*/
+      padding:20px 22%;
+      padding:20px 0%;
+      /*font-size:1.25em;*/
+    }
+    /*Listas de los Ministerios*/
+    .lista-ministerios{
+      margin-left:30px;
+      font-size:1.6em;
+    }
+   /*-- Listas de .one-page --*/
+   .lista1, .lista2{
+     display:block;
+     width:100%;
+   }
+   /*-- Esto afectara tanto tablets como mobiles --*/
+   section.main .barra-lateral,
+   section.main .contenido {
+     display:block;
+     text-align:center;
+     width:100%;
+   }
+   /*-- Streaming --*/
+   section.main .contenido .streaming {
+     margin:0 auto;
+     width: 100%;
+     height: 380px;
+   }
+    /*-- Alineado Sub-titulos h2 --*/
+    .contenido h2{
+      margin-left:10%;
+      text-align: left;
+    }
+   /*Aqui ocultamos info*/
+   .contenedor-info .info-datos {
+     display:none; /*ya no lo queremos aqui*/
+   }
+   /*botones de reproductores*/
+   .video_btn, .live_btn{
+      width: 80%;
+   }
+   /*Arreglo del boton En vivo*/
+   .activoLive{
+      width: 80%;
+   }
+
+   /*
+      modal de informacion que la pagina es Beta
+      esto sera temporal...
+   */
+   .modal-contenedor{
+      height:auto;
+      //max-height:600px;
+      width:80%;
+      max-width: 100%;
+   }
+}
+
+/*--- Mobile(SmartPhone) ---*/
+@media screen and (max-width:600px) {
+  /*-- Streaming --*/
+  section.main .contenido .streaming {
+    height: 240px;
+  }
+  /*-- contenido --*/
+  .contenido h2{
+    margin-left:10%;
+    font-size:2.4em;
+  }
+  /*-- Eventos --*/
+  .eventos h2{
+    font-size:2.4em;/*24px*/
+  }
+
+  /*
+     modal de informacion que la pagina es Beta
+     esto sera temporal...
+  */
+  /*.modal-contenedor{
+     //height:auto;
+     //max-height:600px;
+     //width:60%;
+  }*/
+
+}
+@media screen and (max-width:460px) {
+  .acerca-de{
+    margin-left:10px;
+    width:100%;
+  }
+  .redes-sociales{
+    float:left;
+  }
+  /*temporal*/
+  .modal-contenedor{
+     height:auto;
+     //max-height:600px;
+     width:80%;
+     max-width: 100%;
+  }
+  #modalInfo .modal-contenedor button{
+    float:none;
+    margin:0;
+    width: 100%;
+  }
+}

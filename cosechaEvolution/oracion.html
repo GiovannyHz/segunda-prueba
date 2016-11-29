@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es-Ve">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Oración</title>
+    <meta name="description" content="El Ministerio El Tiempo de la Cosecha, estamos motivados en orar por ti, para que los planes de nuestro Padre Celestial">
+
+    <link rel="shortcut icon" href="app/img/logo/logo.png">
+    <link rel="stylesheet" href="app/css/libs/fonts.css">
+    <link rel="stylesheet" href="app/css/libs/normalize.css">
+    <link rel="stylesheet" href="app/css/content-dist.css">
+    <link rel="stylesheet" href="app/css/info-dist.css">
+    <link rel="stylesheet" href="app/css/menu-responsive-dist.css">
+    <link rel="stylesheet" href="app/css/responsiveDesing-dist.css">
+    <link rel="stylesheet" href="app/css/slider-dist.css">
+    <link rel="stylesheet" href="app/css/style_frm-dist.css">
+    <link rel="stylesheet" href="style-dist.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="contenedor row">
+      <header>
+        <div class="menu_bar"><a href="#" class="boton-bar"><span class="icon-mobile"></span><span class="icon-tablet"></span> Menu</a>
+          <div id="icon" onclick="myFunction(this)" class="icon-menu">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </div>
+        <div class="contenedor-info">
+          <ul class="info-datos">
+            <li><span class="icon-mobile"></span>VE: (+58)414 3648629</li>
+            <li><span class="icon-mail"></span>EMAIL: contacto@page.com</li>
+            <li><span class="icon-phone"></span>TEL: (+58)261 7290416  </li>
+          </ul>
+        </div>
+        <nav id="menu" class="menu-adaptable"><img src="app/img/logo/logo.png" alt="Logo" class="logo">
+          <h1>El Tiempo de la Cosecha</h1>
+          <ul>
+            <li class="list">
+              <a href="index.html">
+                <span class="icon-home3"></span> Inicio
+              </a>
+            </li>
+            <li class="list">
+              <a href="nosotros.html">
+                <span class="icon-price-tag"></span> Nosotros
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon-video"></span> Enseñanzas
+              </a>
+            </li>
+            <li class="list">
+              <a href="#" class="openModal">
+                <span class="icon-mail"></span> Contacto
+              </a>
+            </li>
+            <!-- Sub-menu-->
+            <li id="sub-menu" class="list"><a href="#submenu"><span class="icon-dots-three-vertical"></span>Más<span class="caret icon-chevron-down"></span></a>
+              <ul class="children" name="submenu">
+                <li><a href="#">Escuela <span class="caret icon-dot-single"></span></a></li>
+                <li><a href="fundador.html">Fundador <span class="caret icon-dot-single"></span></a></li>
+                <li><a href="#">Galería <span class="caret icon-dot-single"></span></a></li>
+                <li><a href="#">Ministerios <span class="caret icon-dot-single"></span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <!-- Banner(Principal)-->
+        <div id="banner"><img src="app/img/banner/Centro-de-Oracion.jpg" alt="Motivo de Oracion"></div>
+      </header>
+      <section class="main">
+        <div class="box-main">
+          <section class="one-page">
+            <h2><i class="ion-arrow-right-b"></i>Oración</h2>
+            <figure class="poster"><img src="app/img/banner/Oracion.jpg" alt=""></figure>
+            <main role="main">
+              <article>
+                <h3 class="motivo_Oracion">¿Cuàl es tu Motivo de Oraciòn?</h3>
+                <p>El Ministerio "El Tiempo de la Cosecha", estamos motivados en orar por ti, para que los planes de nuestro <strong>Padre Celestial,</strong> se cumplan en ti y asi tú seras un protagonista mas en cumplir el proposito que Dios tiene en ti. Él es fiel, él es bueno quiere lo mejor para ti y para mi somos mas que <strong>creyentes</strong> somos sus hijos. Nos dió poder y autoridad aqui en la tierra para atar y desatar asi que hay que comenzar aproclamar y declarar bendiciones en nuestras vidas y en nuestro pais. Además de ser bendición para otros. De verdad queremos saber de ti y cual seria tú <strong>"Motivo de Oración."</strong></p>
+                <p class="mensaje">"Yo te daré las llaves del Reino de los Cielos; y lo que ates en la tierra, será atado en los cielos; y lo que desates en la tierra, será desatado en los cielos."<br> <strong>Mateo 16:19</strong></p>
+                <h4 class="consejoMensaje">La Oración es la llave que trae los cielos a la tierra.</h4>
+                <!--Formulario-->
+                <form name="formulario" action="mail.php" method="post" enctype="application/x-www-form-urlencoded" class="formulario">
+                  <input type="text" name="nombre_txt" placeholder="Nombre" required>
+                  <input type="text" name="apellido_txt" placeholder="Apellido" required>
+                  <input type="email" name="email_txt" placeholder="Email" required>
+                  <input type="text" name="pais_txt" placeholder="País" required>
+                  <textarea name="mensaje_txt" placeholder="Motivo de Oración" required></textarea>
+                  <input type="hidden" name="info_hidden" value="motivoDeOracion">
+                  <input style="width:97.5%;" type="submit" name="enviar_btn" value="Enviar Motivo de Oración">
+                </form>
+              </article>
+            </main>
+          </section>
+        </div>
+      </section>
+      <footer>
+        <div class="foot col-3 col-m-3">
+          <h3><i class="icon-globe"></i> Ministerio <i class="ion-chevron-down"></i></h3>
+          <ul class="Ministerio">
+            <li><a href="#">Enseñanzas</a></li>
+            <li><a href="#">Escuela</a></li>
+            <li><a href="fundador.html">Fundador</a></li>
+            <li><a href="nosotros.html">Nosotros </a></li>
+          </ul>
+        </div>
+        <div class="foot col-3 col-m-3">
+          <h3><i class="icon-price-tags"></i> Etiquetas <i class="ion-chevron-down"></i></h3>
+          <ul class="Etiquetas">
+            <li><a href="#">Donacion / Ofrenda</a></li>
+            <li><a href="oracion.html">Motivo de Oración</a></li>
+            <li><a href="#">Ministerios</a></li>
+            <li><a href="#">Predicas  </a></li>
+          </ul>
+        </div>
+        <div class="foot col-3 col-m-3">
+          <h3><i class="ion-android-share-alt"></i> Habla con Nosotros <i class="ion-chevron-down"></i> </h3>
+          <ul class="Habla-con-Nosotros">
+            <li><a href="#" class="openModal">Contactanos</a></li>
+            <li><a href="#">VE: (+58)414 3648629 </a></li>
+            <li><a href="https://www.facebook.com/Helimenasespina23" target="_blank">Siguenos en Facebook</a></li>
+            <li><a href="#">TEL: (+58)261 7290416  </a></li>
+          </ul>
+        </div>
+        <!-- Autores -->
+        <div class="autores">
+          <ul class="acerca-de">
+            <li>
+              <a href="#">
+                <i class="ion-ios-star-outline"></i>
+                  <i class="ion-ios-star"></i>
+                    <span class="tooltip2">Acerca de...</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="redes-sociales">
+            <li><!-- facebook -->
+              <a href="https://www.facebook.com/Helimenasespina23" target="_blank" title="Facebook" class="tooltip">
+                <i class="icon-facebook"></i>
+              </a>
+            </li>
+            <li><!-- google plus -->
+              <a href="#" target="_blank" title="Google Plus" class="tooltip">
+                <i class="icon-google"></i>
+              </a>
+            </li>
+            <li><!-- youtube -->
+              <a href="https://www.youtube.com/channel/UCCmAeDz-23Gc87ojmZbXDpg" target="_blank" title="Youtube" class="tooltip">
+                <i class="icon-youtube"></i>
+              </a>
+            </li>
+            <li><!-- Correo -->
+              <a href="#" title="Correo" class="openModal tooltip">
+                <i class="icon-mail-envelope-closed2"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- derechos de autor -->
+        <div class="derechos-de-autor">
+          <!--
+              CREAR UNA MODAL COMO LA DE REFACTOR ESTA TENDRA
+                1. titulo
+                2. FOTO
+                3. CONTACTOS
+                  3.1 GAMIL > (LOGO) -> GIOVANNYH30@GMAIL.com
+                  3.2 FACEBOKO
+                4. HABLAR DE LO QUE HAGO Y DECIR QUE SOY EL CREADOR DE EN XS PROYECTOS
+                5. HABER UN CONTACTO DIRECTO QUE SE COMUNIQUE CON GMAIL
+           -->
+          <h4>© 2016 Ministerio El Tiempo de la Cosecha. All Right Reserved by Giovanny H.</h4>
+        </div>
+      </footer>
+    </div>
+    <!--Formulario de forma modal-->
+    <section id="modal">
+      <!-- Cerrar X -> Modal -->
+      <span class="close">X</span>
+      <div id="contentModal">
+        <!--header de la modal-->
+        <div class="headerModal">
+          <figure>
+            <img src="app/img/logo/logo.png" alt="Ministerio El Tiempo de la Cosecha" class="logotipo">
+          </figure>
+          <hgroup>
+            <h1>Contacto</h1>
+            <span class="title">El Tiempo de la Cosecha</span>
+          </hgroup>
+        </div>
+        <!--Formulario-->
+        <form name="formulario" action="mail.php" method="post" enctype="application/x-www-form-urlencoded">
+          <input type="text" name="nombre_txt" placeholder="Nombre" required>
+          <input type="text" name="apellido_txt" placeholder="Apellido" required>
+          <input type="email" name="email_txt" placeholder="Email" required>
+          <input type="text" name="pais_txt" placeholder="País" required>
+          <textarea name="mensaje_txt" placeholder="Mensaje" required></textarea>
+          <input type="hidden" name="info_hidden" value="oracion">
+          <input type="submit" name="enviar_btn" value="Enviar Mensaje">
+        </form>
+      </div>
+    </section>
+    <!-- Links de los script-->
+    <script src="app/js/jquery-1.12.2.min.js"></script>
+    <script src="app/js/icon-menu-dist.js"></script>
+    <script src="app/js/modal_frm-dist.js"></script>
+    <script src="app/js/modal-dist.js"></script>
+    <script src="app/js/menu-dist.js"></script>
+    <script src="app/js/slider-dist.js"></script>
+    <script src="app/js/jquery.slides-dist.js"></script>
+    <script src="app/js/slider-dist.js"></script>
+    <script src="app/js/analytics-dist.js"></script>
+  </body>
+</html>

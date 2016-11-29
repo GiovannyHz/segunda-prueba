@@ -1,0 +1,23 @@
+/*Contenedor info*/
+header .contenedor-info {/*datos del ministerio*/
+  display:block;/*Ocultar el contenedor en la version(tablet/mobile) por la "@media query"*/
+  margin:0 auto;
+  text-align:center;
+  width:100%;
+}
+header .contenedor-info .info-datos {/*.info-datos(ul)*/
+  background:#ECf0f1;
+  width:100%;/*tamaño del contenedor*/
+}
+header .contenedor-info .info-datos li{/*listas de ".info-datos"*/
+  color:#000;
+  display:inline-block;/*Desplegamos las listas por medio de esta regla*/
+  font:lighter 1.6em "Roboto", Segoe  UI, Sans-Serif;/*letra fina 18px fuente Roboto*/
+  padding:10px;/*Margenes internos de lso Items*/
+  width:28%;/*Tamaño de los Items */
+}
+/*icons*/
+header .contenedor-info .info-datos li span {
+  margin-right:10px;
+  font-size:1em;/*tamaño de los icons*/
+}
